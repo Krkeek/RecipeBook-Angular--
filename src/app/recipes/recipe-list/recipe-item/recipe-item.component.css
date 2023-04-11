@@ -1,0 +1,31 @@
+a{
+    background-color: #b87730;
+    border-radius: 4px;
+    margin-top: 5px;
+
+}
+
+a:focus{
+    background-color:#1B2625 !important;
+}
+
+a:hover{
+    background-color: #843619;
+}
+
+a:focus h4{
+    color: white !important;
+
+}
+
+h4{
+    color: #1B2625 !important;
+    font-weight:700 !important;
+    font-family: Rubik;
+
+}
+p{
+    color: white;
+    font-family: sans-serif;
+}
+
