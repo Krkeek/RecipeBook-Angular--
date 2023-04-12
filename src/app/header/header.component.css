@@ -5,8 +5,8 @@ nav{
 }
 
 nav a{
-    font-family: Rubik !important;
-    font-weight: 700;
+    font-family: 'mainFont' !important;
+        font-weight: 700;
     font-size: 18px;
     color: #dad0ce;
 }
@@ -26,3 +26,4 @@ nav a{
 .dropdown-item{
     color: #1b2625 !important;
 }
+

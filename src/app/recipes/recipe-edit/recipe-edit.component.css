@@ -1,3 +1,67 @@
 button{
+    font-weight: 600;
+    color: white !important;
     margin-left: 5px !important;
+
 }
+
+button:hover{
+    background-color: #b87730;
+}
+#save{
+    background-color: #843619;
+}
+#save:hover{
+    background-color: #b87730;
+    transition: background-color 0.6s ease;
+
+}
+
+#cancel{
+    background-color: #748991;
+}
+#cancel:hover{
+    background-color: #b87730;
+    transition: background-color 0.6s ease;
+
+}
+#addIngredientButton{
+    background-color: #1b2625;
+}
+#addIngredientButton:hover{
+    background-color: #b87730;
+}
+
+p{
+    font-weight: 700;
+    font-size: 30px;
+    color: #1b2625;
+}
+label{
+    font-weight: 600;
+    font-size: 18px;
+}
+
+#cancelButton{
+    background-color: #748991;
+}
+#cancelButton:hover{
+    background-color: #b87730;
+    transition: background-color 0.6s ease;
+}
+
+#cross{
+    color: white;
+}
+
+.underline {
+    border-bottom: 2px solid currentColor;
+    display: inline-block;
+    line-height: 0.85;
+    text-shadow:
+      2px -2px white,
+      -2px 2px white,
+      -2px -2px #dad0ce;
+  }
+
+

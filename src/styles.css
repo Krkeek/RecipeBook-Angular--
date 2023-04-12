@@ -1,3 +1,9 @@
 body{
     background-color: #dad0ce;
+    font-family: 'mainFont';
+  }
+
+  @font-face {
+    font-family: 'mainFont';
+    src: url('../src/assets/Montserrat-Medium.ttf');
   }

@@ -4,37 +4,44 @@ a{
     margin-top: 5px;
     padding-left: 20px;
     padding-right: 20px;
-    padding-top: 2px;
-    padding-bottom: 2px;
-
+    padding-top: 10px;
+    padding-bottom: 1px;
 
 }
 
 a:focus{
     background-color:#1B2625 !important;
+    transition: background-color 0.6s ease;
+
 }
 
 a:hover{
     background-color: #843619;
+    transition: background-color 0.6s ease;
+    
 }
 
 a:focus h4{
     color: white !important;
 
 }
-a::after{
+:after{
     background-color:#1B2625 !important;
 
 }
 
+:target{
+    background-color:#1B2625 !important;
+
+}
+
+
 h4{
     color: #1B2625 !important;
     font-weight:700 !important;
-    font-family: Rubik;
 
 }
 p{
     color: white;
-    font-family: sans-serif;
 }
 
