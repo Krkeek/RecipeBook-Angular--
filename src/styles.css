@@ -1,5 +1,11 @@
 body{
-    background-color: #dad0ce;
+    /* background-color: #dad0ce; */
+    /* background: rgb(120,137,145);
+    background: linear-gradient(132deg, rgba(120,137,145,1) 0%, rgba(184,119,48,1) 63%);  */
+    background: rgb(218,208,206);
+    background: linear-gradient(132deg, rgba(218,208,206,1) 67%, rgba(27,38,37,1) 100%); 
+    background-attachment: fixed;
+
     font-family: 'mainFont';
   }
 
