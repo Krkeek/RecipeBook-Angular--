@@ -2,6 +2,11 @@ a{
     background-color: #b87730;
     border-radius: 4px;
     margin-top: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+
 
 }
 
@@ -15,6 +20,10 @@ a:hover{
 
 a:focus h4{
     color: white !important;
+
+}
+a::after{
+    background-color:#1B2625 !important;
 
 }
 

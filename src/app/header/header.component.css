@@ -1,6 +1,7 @@
 nav{
     background-color: #1b2625;
     border-bottom: 1px solid #1b2625;    
+    padding: 0 !important;
 }
 
 nav a{
@@ -16,5 +17,12 @@ nav a{
 
 .active{
     background-color: #843619;
+    transition: background-color 0.6s ease;}
+
+.active:hover{
+    background-color: #b87730;
 }
 
+.dropdown-item{
+    color: #1b2625 !important;
+}
