@@ -1,5 +1,4 @@
 nav{
-    justify-content:end;
     background-color: #1b2625;
     border-bottom: 1px solid #1b2625;    
 }
@@ -7,8 +6,15 @@ nav{
 nav a{
     font-family: Rubik !important;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 18px;
     color: #dad0ce;
 }
 
+#brand{
+    font-size: 25px;
+}
+
+.active{
+    background-color: #843619;
+}
 

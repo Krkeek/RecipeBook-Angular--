@@ -1,3 +1,4 @@
+//I am not using it anymore, I am using the bootstrap dropdown
 import { Directive, HostListener, HostBinding } from '@angular/core';
 
 @Directive({
