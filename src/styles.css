@@ -1,8 +1,41 @@
 body{
-    font-family: 'mainFont';
+    font-family: 'Circular Book';
   }
 
   @font-face {
-    font-family: 'mainFont';
-    src: url('../src/assets/ProductSansInfanity.ttf');
+    font-family: 'Corda-Medium';
+    src: url('../src/assets/Corda-Medium.otf');
   }
+
+  @font-face {
+    font-family: 'Circular Book';
+    src: url('../src/assets/AvenirLTStd-Medium.otf');
+  }
+
+  .btnType-A{
+    background-color: #F07167;
+    font-size: 48px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 2px solid #F07167;
+
+
+  }
+
+  .btnType-A:hover{
+    background-color: #f07067e0;
+   }
+
+   .btnType-B{
+    background-color: #00AFB9;
+    font-size: 48px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 2px solid #00AFB9;
+
+
+  }
+
+  .btnType-B:hover{
+    background-color: #00AFB9;
+   }
