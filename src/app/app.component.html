@@ -1,7 +1,16 @@
-<main role="main" class="container mt-3">
+<div class="container-fluid">
+
   <div class="row">
-    <div class="col-ms-12">
-      <router-outlet></router-outlet>
+    <div id="welcomePage" class="col">
+      <app-welcome-page></app-welcome-page>
     </div>
-  </div>
-</main>
+    </div>
+
+      <div class="row">
+        <div id="recipes" class="col">
+          <app-recipes></app-recipes>
+        </div>
+      </div>
+  
+ 
+</div>

@@ -1,0 +1,15 @@
+#welcomePage{
+    background-image: url(../assets/images/Background.PNG);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh; /* For 100% screen height */
+    width:  100vw; /* For 100% screen width */
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+
+#recipes{
+    background-color: #FED9B7;
+}
