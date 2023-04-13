@@ -21,6 +21,7 @@
     "bootstrap": "^5.2.3",
     "bootstrap-icons": "^1.10.4",
     "i": "^0.3.7",
+    "ngx-modal-dialog": "^4.0.0",
     "rxjs": "~7.8.0",
     "save": "^2.9.0",
     "tslib": "^2.3.0",
