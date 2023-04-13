@@ -3,7 +3,12 @@
       <app-recipe-list></app-recipe-list>
     </div>
     <div class="col-md-7 mt-3 mt-md-0">
-      <router-outlet name="recipeRoutes"></router-outlet>
+
+      <div id="scroll" class="overflow-auto">
+        <router-outlet name="recipeRoutes"></router-outlet>
+      </div>
+    
+
       </div>
   </div>
 

@@ -2,6 +2,11 @@ body{
     font-family: 'Circular Book';
   }
 
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  
+
   @font-face {
     font-family: 'Corda-Medium';
     src: url('../src/assets/Corda-Medium.otf');

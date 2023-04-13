@@ -9,20 +9,6 @@ import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 
 
-// const appRoutes: Routes = [
-//   {path: '', component: AppComponent},
-//   { path: 'shopping-list', component: ShoppingListComponent },
-//   { path: 'welcome-page', component: WelcomePageComponent},
-//   { path: 'recipes', component: RecipesComponent, children: [
-//     { path: '', component: RecipeStartComponent, outlet: 'recipeRoutes' },
-//     { path: 'new', component: RecipeEditComponent, outlet: 'recipeRoutes' },
-//     { path: ':id', component: RecipeDetailComponent, outlet: 'recipeRoutes' },
-//     { path: ':id/edit', component: RecipeEditComponent, outlet: 'recipeRoutes' },
-//   ] },
-//   { path: '**', redirectTo: '' }
-// ];
-
-
  const appRoutes: Routes = [
   { path: '', redirectTo: '/welcome-page', pathMatch: 'full' },
   { path: 'welcome-page', component: WelcomePageComponent },
