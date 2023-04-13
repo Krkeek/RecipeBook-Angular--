@@ -1,9 +1,9 @@
 
 
 #welcomeContainer{
+    max-height: inherit !important;
     background-color: #FDFCDC;
     border: 1px solid white;
-    border-radius: 10px;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
     opacity: 0.85;
 
@@ -13,13 +13,22 @@ h1{
     font-family: 'Corda-Medium';
     font-size: calc(100% + 6vw + 6vh);
     color: #F07167;
-    text-shadow: -1px 0 #ef4f43, 0 1px #ef4f43, 1px 0 #ef4f43, 0 -1px #ef4f43;
+    text-shadow: -1px 0 #0081A7, 0 1px #0081A7, 1px 0 #0081A7, 0 -1px #0081A7;
 
 }
 
 p{
-    font-size: calc(100% + 0.9vw + 0.9vw);}
+    font-size: calc(100% + 0.9vw + 0.9vw);
+color: #0081A7;
+}
 
 #shoppingListButton{
     font-size: 30px;
 }
+
+.btnType-A{
+    font-size: calc(100% + 0.9vw + 0.9vw);
+    border-radius: 0;
+    
+}
+
