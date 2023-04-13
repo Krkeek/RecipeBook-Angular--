@@ -2,3 +2,12 @@
     max-height: 90vh;
     overflow-y: hidden;
 }
+
+#detailContainer{
+    max-height: inherit !important;
+    background-color: #FDFCDC;
+    border: 1px solid white;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+    opacity: 0.85;
+
+}
