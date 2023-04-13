@@ -24,6 +24,9 @@ body{
 
   .btnType-A:hover{
     background-color: #f07067e0;
+    border-radius: 10px;
+    transition: border-radius 0.6 all;
+
    }
 
    .btnType-B{

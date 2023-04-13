@@ -15,12 +15,19 @@
 #welcomeContainer{
     background-color: #FDFCDC;
     border: 1px solid white;
-    border-radius: 30px;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);}
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+    opacity: 0.85;
+
+}
 
 h1{
     font-family: 'Corda-Medium';
-    font-size: calc(100% + 6vw + 6vh);}
+    font-size: calc(100% + 6vw + 6vh);
+    color: #F07167;
+    text-shadow: -1px 0 #ef4f43, 0 1px #ef4f43, 1px 0 #ef4f43, 0 -1px #ef4f43;
+
+}
 
 p{
     font-size: calc(100% + 0.9vw + 0.9vw);}
