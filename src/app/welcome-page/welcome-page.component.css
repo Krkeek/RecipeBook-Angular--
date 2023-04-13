@@ -13,9 +13,6 @@
 }
 
 #welcomeContainer{
-    position: fixed;
-    width: 80%;
-    height: 85%;
     background-color: #FDFCDC;
     border: 1px solid white;
     border-radius: 30px;
