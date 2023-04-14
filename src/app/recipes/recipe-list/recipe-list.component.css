@@ -1,12 +1,4 @@
-button{
-    background-color: #843619;
-    font-weight: 600;
-    color: white !important;
-}
 
-button:hover{
-    background-color: #b87730;
-}
 img{
     width: 30px;
     height: 30px;
