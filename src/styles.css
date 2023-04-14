@@ -42,6 +42,7 @@ html,body{
 
    }
    .btnType-B{
+    color: black !important;
     background-color: #DAD7CD;
     font-size: 48px;
     font-weight: bold;
@@ -50,6 +51,7 @@ html,body{
 
   }
   .btnType-B:hover{
+    color: black !important;
     background-color: #A3B18A;
     transition: background-color 0.9s ease;
    }
