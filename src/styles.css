@@ -1,5 +1,13 @@
-body{
+html,body{
+  overflow-x: hidden !important;
+  width: 100vw !important;
+}
+  
+
+  body{
     font-family: 'Raleway';
+    
+
   }
 
   ::-webkit-scrollbar {
