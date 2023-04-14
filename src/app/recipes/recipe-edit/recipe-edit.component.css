@@ -1,36 +1,8 @@
-button{
-    font-weight: 600;
-    color: white !important;
-    margin-left: 5px !important;
 
+#save, #cancel{
+    font-size: 25px
 }
 
-button:hover{
-    background-color: #b87730;
-}
-#save{
-    background-color: #843619;
-}
-#save:hover{
-    background-color: #b87730;
-    transition: background-color 0.6s ease;
-
-}
-
-#cancel{
-    background-color: #748991;
-}
-#cancel:hover{
-    background-color: #b87730;
-    transition: background-color 0.6s ease;
-
-}
-#addIngredientButton{
-    background-color: #1b2625;
-}
-#addIngredientButton:hover{
-    background-color: #b87730;
-}
 
 p{
     font-weight: 700;
@@ -40,13 +12,15 @@ p{
 label{
     font-weight: 600;
     font-size: 18px;
+    color: #0081A7;
 }
 
-#cancelButton{
+#cancelButton, #addIngredientButton{
     background-color: #748991;
+    color: white;
 }
-#cancelButton:hover{
-    background-color: #b87730;
+#cancelButton:hover, #addIngredientButton:hover{
+    background-color: #0081A7;
     transition: background-color 0.6s ease;
 }
 
@@ -58,10 +32,14 @@ label{
     border-bottom: 2px solid currentColor;
     display: inline-block;
     line-height: 0.85;
-    text-shadow:
-      2px -2px white,
-      -2px 2px white,
-      -2px -2px #dad0ce;
+    color: #0081A7;
+    /* text-shadow:
+      2px -2px #0081A7,
+      -2px 2px #0081A7,
+      -2px -2px #0081A7; */
   }
 
+  #recipeEditBox{
+    padding: 20px;
+  }
 

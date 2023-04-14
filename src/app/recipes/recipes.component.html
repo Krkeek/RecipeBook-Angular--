@@ -1,16 +1,25 @@
   <div id="recipeContainer" class="row mt-5">
-    <div class="col-md-5 ">
-      <app-recipe-list></app-recipe-list>
+    <div class="col-md-3 ">
+      <label for="recipes"> <span style=" color: #0081A7;">Step 1: </span>Choose your Recipe:</label>
+      <div  class="detailContainer">
+        <div class="scroll overflow-auto">
+          <app-recipe-list></app-recipe-list>
+          </div>
+        </div>
     </div>
     <div class="col-md-7 mt-3 mt-md-0">
-      <div id="detailContainer" class="pt-3 pb-3 pl-2 pr-2">
-      <div id="scroll" class="overflow-auto">
+      <label for="details"> <span style=" color: #0081A7;"> Step 2: </span>Check the Details:</label>
+      <div  class="detailContainer pt-3 pb-3 pl-2 pr-2">
+      <div class="scroll overflow-auto">
           <router-outlet name="recipeRoutes"></router-outlet>
         </div>
       </div>
-    
-
       </div>
+      <div class="col-md-2 mt-3 mt-md-0">
+        <label for="enjoy"><span style=" color: #0081A7;">Step 3: </span>Enjoy it :D</label>
+        <div  class="detailContainer"></div>
+
+        </div>
   </div>
 
 

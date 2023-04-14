@@ -21,17 +21,16 @@ body{
     background-color: #F07167;
     font-size: 48px;
     font-weight: bold;
-    border: 1px solid #00AFB9;
+    border: 1px solid #F07167;
 
 
   }
   .btnType-A:hover{
     background-color: #f07067e0;
-    transition: border-radius 0.6 all;
-
+    transition: background-color 0.9s ease;
    }
    .btnType-B{
-    background-color: #00AFB9;
+    background-color: #0081A7;
     font-size: 48px;
     font-weight: bold;
     border: 1px solid #00AFB9;
@@ -40,4 +39,5 @@ body{
   }
   .btnType-B:hover{
     background-color: #00AFB9;
+    transition: background-color 0.9s ease;
    }
