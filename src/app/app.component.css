@@ -23,7 +23,6 @@
 
 #recipes{
     background-color: white;
-    border-bottom: 1px solid #212529;
     padding-bottom: 20px;
     min-height: 100vh;
     height: fit-content;
@@ -31,7 +30,7 @@
 }
 
 #shoppingList{
-    background-color:white;
+    background-color:#588157;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

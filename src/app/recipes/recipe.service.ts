@@ -14,7 +14,13 @@ export class RecipeService {
       'https://cdn.gutekueche.de/upload/rezept/371/wiener-schnitzel.jpg',
       [
         new Ingredient('Meat', 1),
-        new Ingredient('French Fries', 20)
+        new Ingredient('French Fries', 20),
+        new Ingredient('Cheese', 2),
+        new Ingredient('Meat', 1),
+        new Ingredient('Cheese', 2),
+        new Ingredient('Meat', 1),
+        new Ingredient('Cheese', 2),
+        new Ingredient('Meat', 1),
       ]),
     new Recipe('Big Fat Burger',
       'What else you need to say?',
