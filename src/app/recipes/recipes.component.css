@@ -4,18 +4,9 @@
 }
 
 .detailContainer{
+    background-color: whitesmoke;
     max-height: inherit !important;
-    background-color: #FDFCDC;
-    border: 1px solid white;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
-    opacity: 0.85;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+    opacity: 0.90;
 
-}
-#detailContainer:hover{
-    background-color: #fdfcdcc8;
-    transition: background-color 0.9s ease;
-
-}
-label{
-    font-size: 20px;
 }

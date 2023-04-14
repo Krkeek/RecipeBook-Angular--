@@ -1,8 +1,17 @@
-#welcomePage{
-    background-image: url(../assets/images/Background3.png);
+#scrollContainer{
+    background: linear-gradient(rgba(4, 4, 4, 0.6), rgba(8, 8, 8, 0.393)), url(../assets/images/picture1.jpg) ;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.scroll{
+    max-height: 100vh;
+    overflow-y: hidden;
+}
+
+#welcomePage{
+    background-color: transparent;
     height: 100vh;
     width:  100vw; 
     left: 0;
@@ -11,8 +20,8 @@
 }
 
 #recipes{
-    background-color: #FED9B7;
-    border-top: 1px solid #212529;
+    /* background-image: url('../assets/images/Background4.png');     */
+    background-color: white;
     border-bottom: 1px solid #212529;
     padding-bottom: 20px;
     min-height: 100vh;
