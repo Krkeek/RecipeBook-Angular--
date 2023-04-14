@@ -1,45 +1,47 @@
 
 #save, #cancel{
-    font-size: 25px
+    font-size: 20px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 7px !important;
+    padding-bottom: 7px !important;
+
+
 }
 
 
 p{
     font-weight: 700;
     font-size: 30px;
-    color: #1b2625;
+    color: black;
 }
 label{
     font-weight: 600;
     font-size: 18px;
-    color: #0081A7;
+    color: black;
 }
 
-#cancelButton, #addIngredientButton{
-    background-color: #748991;
-    color: white;
-}
-#cancelButton:hover, #addIngredientButton:hover{
-    background-color: #0081A7;
-    transition: background-color 0.6s ease;
-}
 
 #cross{
     color: white;
 }
 
 .underline {
-    border-bottom: 2px solid currentColor;
-    display: inline-block;
-    line-height: 0.85;
-    color: #0081A7;
-    /* text-shadow:
-      2px -2px #0081A7,
-      -2px 2px #0081A7,
-      -2px -2px #0081A7; */
+    color: black;
+    font-weight: bolder;
   }
 
-  #recipeEditBox{
+#recipeEditBox{
     padding: 20px;
   }
 
+#addIngredientButton{
+    font-size: medium;
+    padding: 10px;
+
+
+}
+
+input, textarea{
+    background-color: whitesmoke;
+}

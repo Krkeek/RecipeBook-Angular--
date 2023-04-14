@@ -42,14 +42,14 @@ html,body{
 
    }
    .btnType-B{
-    background-color: #0081A7;
+    background-color: #DAD7CD;
     font-size: 48px;
     font-weight: bold;
-    border: 1px solid #00AFB9;
+    border: 1px solid #DAD7CD;
 
 
   }
   .btnType-B:hover{
-    background-color: #00AFB9;
+    background-color: #A3B18A;
     transition: background-color 0.9s ease;
    }

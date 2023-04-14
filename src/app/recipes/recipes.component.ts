@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 import { RecipeService } from './recipe.service';
 
@@ -15,5 +15,7 @@ export class RecipesComponent implements OnInit {
   ngOnInit() {
 
   }
+
+  
 
 }
