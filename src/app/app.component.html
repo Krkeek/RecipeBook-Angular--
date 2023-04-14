@@ -1,18 +1,20 @@
-<div id="scrollContainer" class="container-fluid scroll overflow-auto">
-  <div class="row">
-    <div id="welcomePage" class="col">
-      <app-welcome-page></app-welcome-page>
-    </div>
-    </div>
+<div id="scrollContainer" class="scroll">
+    <div class="row">
+      <div id="welcomePage" class="col">
+        <app-welcome-page></app-welcome-page>
+      </div>
+      </div>
+  
+        <div class="row">
+          <div  id="recipes" class="col" #recipes>
+            <app-recipes></app-recipes>
+          </div>
+        </div>
+        <div class="row">
+          <div  id="shoppingList" class="col" #shoppingList>
+            <app-shopping-list></app-shopping-list>
+          </div>
+        </div>
+  </div>
 
-      <div class="row">
-        <div  id="recipes" class="col" #recipes>
-          <app-recipes></app-recipes>
-        </div>
-      </div>
-      <div class="row">
-        <div  id="shoppingList" class="col" #shoppingList>
-          <app-shopping-list></app-shopping-list>
-        </div>
-      </div>
-</div>
+

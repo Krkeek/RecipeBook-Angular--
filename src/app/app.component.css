@@ -1,42 +1,41 @@
+
 #scrollContainer{
     background: linear-gradient(rgba(4, 4, 4, 0.6), rgba(8, 8, 8, 0.393)), url(../assets/images/picture1.jpg) ;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    max-width: 100%;
 }
 
 .scroll{
     max-height: 100vh;
-    overflow-y: hidden;
+    overflow-x:hidden;
+ 
 }
 
 #welcomePage{
     background-color: transparent;
     height: 100vh;
-    width:  100vw; 
     left: 0;
     top: 0;
     z-index: 10;
 }
 
 #recipes{
-    /* background-image: url('../assets/images/Background4.png');     */
     background-color: white;
     border-bottom: 1px solid #212529;
     padding-bottom: 20px;
     min-height: 100vh;
     height: fit-content;
-    width:  100vw; 
 
 }
 
 #shoppingList{
-    background-image: url(../assets/images/Background3.png);
+    background-color:white;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    width:  100vw; 
     left: 0;
     top: 0;
     z-index: 10;
