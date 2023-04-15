@@ -4,23 +4,20 @@
 }
 
 .detailContainer{
-    background-color: whitesmoke;
     max-height: inherit !important;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
-    opacity: 0.90;
 
 
 }
 
 
 .detailContainer2{
-    background-image: url('../../assets/images/Background4.png');
+    background-image: url('../../assets/images/Background6.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     max-height: inherit !important;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
-    opacity: 0.90;
+
 
 
 }

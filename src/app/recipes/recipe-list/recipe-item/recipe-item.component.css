@@ -6,10 +6,14 @@ a{
     margin-right: auto;
     padding-top: 10px;
     width: 95%;
+    border: 2px solid #1B2625;
 }
 a:focus{
     background-color:#DAD7CD;
-    transition: background-color 0.6s ease !important;
+    border: 2px solid white;
+    transition: background-color 1s ease !important;
+    transition: border 0.9s ease !important;
+
 
 }
 a:focus h4{
@@ -18,9 +22,9 @@ a:focus h4{
 }
 
 a:hover{
-    border: 1px solid #344E41;
-    transition: border-color 0.6s ease !important;
-    transition: background-color 1s ease !important;
+    border: 2px solid white;
+    transition: border 0.9s ease !important;
+    transition: background-color 0.5s ease !important;
 }
 
 h4{

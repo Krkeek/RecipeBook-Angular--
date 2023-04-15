@@ -25,11 +25,15 @@
     z-index: 10;
 }
 
+
 #recipes{
-    background-color: white;
+    background-color: transparent;
+    backdrop-filter: blur(20px);
     padding-bottom: 20px;
     min-height: 100vh;
     height: fit-content;
+    /* box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.785); */
+    box-shadow: inset 0 0 10px black;
 
 }
 
