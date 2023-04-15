@@ -1,3 +1,11 @@
+img{
+    max-width: 60%;
+    height: auto;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+
+}
+
+
 
 #save, #cancel{
     font-size: 20px;
@@ -6,6 +14,12 @@
     padding-top: 7px !important;
     padding-bottom: 7px !important;
 
+
+
+}
+#save:disabled{
+    background-color: #A3B18A;
+    transition: background-color 0.6s ease-in-out;
 
 }
 
@@ -44,4 +58,9 @@ label{
 
 input, textarea{
     background-color: whitesmoke;
+}
+
+input.ng-invalid.ng-touched,
+textarea.bg-invalid.ng-touched{
+    border: 1px solid red;
 }

@@ -20,6 +20,9 @@
         <div class="col">
             <a (click)="toShoppingList()" class="btn btnType-A">Shopping List <img src="../../assets/images/arrowDown.png" alt="arrowDown" class="img-responsive" width="30px"></a>
         </div>
+        <div class="col">
+            <a [routerLink]='[{ outlets: { recipeRoutes: "new" } }]' (click)="toRecipePage()" class="btn btnType-A">Add Recipe <img src="../../assets/images/arrowUp.png" alt="arrowDown" class="img-responsive" width="30px"></a>
+        </div>
     </div>         
 </div>
 
