@@ -9,6 +9,9 @@
 
 }
 
+#cancelButton{
+    font-size: 20px;
+}
 
 p{
     font-weight: 700;
@@ -22,9 +25,6 @@ label{
 }
 
 
-#cross{
-    color: white;
-}
 
 .underline {
     color: black;
