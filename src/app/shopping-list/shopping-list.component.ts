@@ -3,6 +3,8 @@ import { Subscription } from 'rxjs';
 
 import { Ingredient } from '../shared/ingredient.model';
 import { ShoppingListService } from './shopping-list.service';
+import { RecipeService } from '../recipes/recipe.service';
+import { Recipe } from '../recipes/recipe.model';
 
 
 @Component({
@@ -19,6 +21,7 @@ export class ShoppingListComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
+ 
     this.ingredients = this.slService.getIngredients();
     this.subsciption = this.slService.ingredientsChanged
       .subscribe(
