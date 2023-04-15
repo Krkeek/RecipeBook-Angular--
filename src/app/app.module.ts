@@ -18,6 +18,7 @@ import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.compon
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { AppService } from './app.service';
+import { ShoppingListIntroComponent } from './shopping-list-intro/shopping-list-intro.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { AppService } from './app.service';
     RecipeStartComponent,
     RecipeEditComponent,
     WelcomePageComponent,
+    ShoppingListIntroComponent,
   ],
   imports: [BrowserModule,FormsModule, AppRoutingModule, ReactiveFormsModule, ScrollingModule],
   providers: [ShoppingListService, AppService],

@@ -5,7 +5,11 @@
     background-repeat: no-repeat;
     background-size: cover;
     max-width:100%;
+
+
 }
+   
+
 
 .scroll{
     max-height: 100vh;
@@ -27,6 +31,14 @@
     min-height: 100vh;
     height: fit-content;
 
+}
+
+#toShoppingList{
+    background-color: transparent;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    z-index: 10;
 }
 
 #shoppingList{

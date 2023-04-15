@@ -12,6 +12,11 @@ import { Router } from '@angular/router';
 export class AppComponent implements OnInit {
   private fragment: string;
   @ViewChild('recipes') recipeSection: ElementRef;
+  @ViewChild('welcomePage') welcomePageSection: ElementRef;
+  @ViewChild('toShoppingListPage') toShoppingListPage: ElementRef;
+  @ViewChild('shoppingList') shoppingList: ElementRef;
+
+
 
   constructor(private route: ActivatedRoute,private appService: AppService, private router: Router){}
   
@@ -19,6 +24,19 @@ export class AppComponent implements OnInit {
     this.appService.OnLooktoRecipes.subscribe((clicked)=>{
       this.recipeSection.nativeElement.scrollIntoView({behavior: "smooth", block: "start"});
     })
+    
+    this.appService.toWelcomePage.subscribe((clicked)=>{
+      this.welcomePageSection.nativeElement.scrollIntoView({behavior: "smooth", block: "start"});
+    })
+
+    this.appService.toShoppingListPage.subscribe((clicked)=>{
+      this.toShoppingListPage.nativeElement.scrollIntoView({behavior: "smooth", block: "start"});
+    })
+
+    this.appService.toShoppingList.subscribe((clicked)=>{
+      this.shoppingList.nativeElement.scrollIntoView({behavior: "smooth", block: "start"});
+    })
+    
     
   
 }
