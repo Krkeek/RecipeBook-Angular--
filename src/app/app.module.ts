@@ -21,6 +21,7 @@ import { AppService } from './app.service';
 import { ShoppingListIntroComponent } from './shopping-list-intro/shopping-list-intro.component';
 import { DataStorageService } from './shared/data-storage.service';
 import { RecipeService } from './recipes/recipe.service';
+import { AuthComponent } from './auth/auth/auth.component';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { RecipeService } from './recipes/recipe.service';
     RecipeEditComponent,
     WelcomePageComponent,
     ShoppingListIntroComponent,
+    AuthComponent,
   ],
   imports: [
     BrowserModule,
