@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {ScrollingModule} from '@angular/cdk/scrolling'
-
+import { HttpClientModule } from "@angular/common/http"
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { RecipesComponent } from './recipes/recipes.component';
@@ -19,6 +19,8 @@ import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { AppService } from './app.service';
 import { ShoppingListIntroComponent } from './shopping-list-intro/shopping-list-intro.component';
+import { DataStorageService } from './shared/data-storage.service';
+import { RecipeService } from './recipes/recipe.service';
 
 
 @NgModule({
@@ -37,8 +39,14 @@ import { ShoppingListIntroComponent } from './shopping-list-intro/shopping-list-
     WelcomePageComponent,
     ShoppingListIntroComponent,
   ],
-  imports: [BrowserModule,FormsModule, AppRoutingModule, ReactiveFormsModule, ScrollingModule],
-  providers: [ShoppingListService, AppService],
+  imports: [
+    BrowserModule,
+    FormsModule,
+     AppRoutingModule,
+      ReactiveFormsModule,
+       ScrollingModule,
+        HttpClientModule],
+  providers: [ShoppingListService, AppService, DataStorageService, RecipeService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

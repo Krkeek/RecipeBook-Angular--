@@ -3,6 +3,9 @@ import { OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { AppService } from './app.service';
 import { Router } from '@angular/router';
+import { DataStorageService } from './shared/data-storage.service';
+import { RecipeService } from './recipes/recipe.service';
+import { Recipe } from './recipes/recipe.model';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +21,13 @@ export class AppComponent implements OnInit {
 
 
 
-  constructor(private route: ActivatedRoute,private appService: AppService, private router: Router){}
+  constructor(
+    private route: ActivatedRoute,
+    private appService: AppService,
+    private recipeService: RecipeService,
+    private dataStorageService: DataStorageService,
+    
+    ){}
   
   ngOnInit(): void {
     this.appService.OnLooktoRecipes.subscribe((clicked)=>{
@@ -36,7 +45,7 @@ export class AppComponent implements OnInit {
     this.appService.toShoppingList.subscribe((clicked)=>{
       this.shoppingList.nativeElement.scrollIntoView({behavior: "smooth", block: "start"});
     })
-    
+
     
   
 }
