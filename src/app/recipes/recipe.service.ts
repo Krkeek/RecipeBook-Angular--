@@ -4,6 +4,7 @@ import { Recipe } from './recipe.model';
 import { Ingredient } from '../shared/ingredient.model';
 import { ShoppingListService } from '../shopping-list/shopping-list.service';
 import { Subject } from 'rxjs';
+import { DataStorageService } from '../shared/data-storage.service';
 
 @Injectable()
 export class RecipeService {
@@ -20,7 +21,7 @@ export class RecipeService {
         ])
   ];
 
-  constructor(private slService: ShoppingListService) {}
+  constructor(private slService: ShoppingListService, private dataStorageService: DataStorageService) {}
 
   getRecipes() {
     return this.recipes.slice();
@@ -50,9 +51,16 @@ export class RecipeService {
   }
 
   deleteRecipe(index: number){
-this.recipes.splice(index,1); 
-this.recipesChanged.next(this.recipes.slice());
+        this.recipes.splice(index,1); 
+        this.recipesChanged.next(this.recipes.slice());
+
+        const recipeToDelete = this.getRecipe(index);
+        this.dataStorageService.deleteRecipe(recipeToDelete.name, recipeToDelete.description);
+
   }
+
+    
+
 
   setRecipes(recipes: Recipe[]){
     const recipesToArray = Object.values(recipes);

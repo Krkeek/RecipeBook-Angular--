@@ -19,7 +19,9 @@ export class DataStorageService {
 
     fetchRecipes(){
         return this.http.get<Recipe[]>('https://recipebook-krkeek-default-rtdb.europe-west1.firebasedatabase.app/recipes.json');
-
+    }
+    deleteRecipe( recipeName:String, recipeDescription: String){
+        
 
     }
 } 
