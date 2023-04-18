@@ -49,11 +49,9 @@ export class RecipeService {
 
   }
 
-  x = new EventEmitter <Recipe[]>();
 
   setRecipes(recipes: Recipe[]){
     this.recipes = recipes;
-    console.log('setting recipe...');
     this.recipesChanged.next(this.recipes.slice());
   }
 

@@ -3,7 +3,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 
 import { Recipe } from '../recipe.model';
 import { RecipeService } from '../recipe.service';
-import { Subscription } from 'rxjs';
+import { Subscription, map, tap } from 'rxjs';
 import { DataStorageService } from 'src/app/shared/data-storage.service';
 
 @Component({
@@ -27,16 +27,21 @@ export class RecipeListComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    console.log("list started");
-    this.subscription = this.recipeService.recipesChanged.subscribe((recipes: Recipe[])=>{
-      console.log("Subsbscribe Worked!! "+recipes);
+    this.subscription = this.recipeService.recipesChanged
+    .pipe(map(recipes => {
+      return recipes.map(recipe =>{
+        return {...recipe, ingredients: recipe.ingredients? recipe.ingredients : [] };
+      });
+
+
+    }))
+    .subscribe((recipes: Recipe[])=>{
       this.recipes = recipes
     })
-    this.dataStorageService.fetchRecipes().subscribe( recipes =>{
-      console.log("fetched")
+    this.dataStorageService.fetchRecipes()
+    .subscribe( recipes =>{
       this.recipeService.setRecipes(recipes);            
   })
-
   }
 
 }

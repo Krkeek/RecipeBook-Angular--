@@ -68,6 +68,7 @@ export class RecipeEditComponent implements OnInit {
       this.recipeService.addRecipe(this.recipeForm.value);
     }
     this.dataStorageService.storeRecipes(this.recipeService.getRecipes());
+    this.onCancel();
   }
 
 

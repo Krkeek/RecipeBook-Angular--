@@ -13,16 +13,13 @@ export class DataStorageService {
      
    
      storeRecipes(recipes){
-        console.log("Data:"+recipes);
         this.http.put('https://recipebook-krkeek-default-rtdb.europe-west1.firebasedatabase.app/recipes.json',recipes)
         .subscribe(()=>{
-            console.log('Success');
         })
         
     }
 
     fetchRecipes(){
-        console.log("fetching...");
         return this.http.get<Recipe[]>('https://recipebook-krkeek-default-rtdb.europe-west1.firebasedatabase.app/recipes.json')
        
     } 
