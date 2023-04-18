@@ -7,16 +7,18 @@ import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.compon
 import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
+import { AuthComponent } from './auth/auth.component';
 
 
  const appRoutes: Routes = [
   { path: '', redirectTo: '/welcome-page', pathMatch: 'full' },
   { path: 'welcome-page', component: WelcomePageComponent },
+  { path: 'shopping-list', component: ShoppingListComponent },
+  { path: 'auth', component: AuthComponent},
   { path: '', component: RecipeStartComponent,outlet: 'recipeRoutes' },
   { path: 'new', component: RecipeEditComponent,outlet: 'recipeRoutes' },
   { path: ':id', component: RecipeDetailComponent,outlet: 'recipeRoutes' },
-  { path: ':id/edit', component: RecipeEditComponent,outlet: 'recipeRoutes' },
-  { path: 'shopping-list', component: ShoppingListComponent },
+  { path: ':id/edit', component: RecipeEditComponent,outlet: 'recipeRoutes' }
 ];
 
 @NgModule({
