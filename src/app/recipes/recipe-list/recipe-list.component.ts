@@ -3,7 +3,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 
 import { Recipe } from '../recipe.model';
 import { RecipeService } from '../recipe.service';
-import { Subscription, map, tap } from 'rxjs';
+import { Subscription, map } from 'rxjs';
 import { DataStorageService } from 'src/app/shared/data-storage.service';
 
 @Component({

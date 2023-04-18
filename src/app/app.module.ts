@@ -17,14 +17,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
-import { AppService } from './app.service';
 import { ShoppingListIntroComponent } from './shopping-list-intro/shopping-list-intro.component';
 import { DataStorageService } from './shared/data-storage.service';
 import { RecipeService } from './recipes/recipe.service';
 import { AuthComponent } from './auth/auth.component';
 import { environment } from '../environments/environment';
-
+import { MainPageService } from './main-page/main-page.service';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { MainPageComponent } from './main-page/main-page.component';
 
 
 @NgModule({
@@ -42,7 +42,8 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
     RecipeEditComponent,
     WelcomePageComponent,
     ShoppingListIntroComponent,
-    AuthComponent
+    AuthComponent,
+    MainPageComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +55,7 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
         provideFirebaseApp(() => initializeApp(environment.firebase)),
     
       ],
-  providers: [ShoppingListService, AppService, DataStorageService, RecipeService],
+  providers: [ShoppingListService, MainPageService, DataStorageService, RecipeService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

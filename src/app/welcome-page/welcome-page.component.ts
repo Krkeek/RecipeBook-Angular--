@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { AppService } from '../app.service';
 import { DataStorageService } from '../shared/data-storage.service';
+import { MainPageService } from '../main-page/main-page.service';
 
 @Component({
   selector: 'app-welcome-page',
@@ -9,10 +9,10 @@ import { DataStorageService } from '../shared/data-storage.service';
 })
 export class WelcomePageComponent {
 
-  constructor(private appService: AppService, private dataStorageService: DataStorageService){}
+  constructor(private mainPageService: MainPageService, private dataStorageService: DataStorageService){}
 
   lookForRecipes(){
-    this.appService.OnLooktoRecipes.emit(true);
+    this.mainPageService.OnLooktoRecipes.emit(true);
   }
 
 }

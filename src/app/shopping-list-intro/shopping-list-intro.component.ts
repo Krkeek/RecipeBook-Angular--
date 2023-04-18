@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { AppService } from '../app.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { MainPageService } from '../main-page/main-page.service';
 
 @Component({
   selector: 'app-shopping-list-intro',
@@ -9,17 +9,17 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class ShoppingListIntroComponent {
 
-  constructor(private appService: AppService,
+  constructor(private mainPageService: MainPageService,
     private router: Router,
     private route: ActivatedRoute
     ){}
 
   toShoppingList(){
-    this.appService.toShoppingList.emit(true);
+    this.mainPageService.toShoppingList.emit(true);
   }
 
   toRecipePage(){
-    this.appService.OnLooktoRecipes.emit(true);
+    this.mainPageService.OnLooktoRecipes.emit(true);
 
   }
 

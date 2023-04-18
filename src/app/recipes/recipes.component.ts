@@ -1,7 +1,7 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { RecipeService } from './recipe.service';
-import { AppService } from '../app.service';
+import { MainPageService } from '../main-page/main-page.service';
 
 @Component({
   selector: 'app-recipes',
@@ -10,7 +10,7 @@ import { AppService } from '../app.service';
   providers: [RecipeService]
 })
 export class RecipesComponent implements OnInit {
-  constructor(private appService: AppService) {
+  constructor(private mainPageService: MainPageService) {
   }
 
   ngOnInit() {
@@ -18,10 +18,10 @@ export class RecipesComponent implements OnInit {
   }
 
   toWelcomePage(){
-    this.appService.toWelcomePage.emit(true);
+    this.mainPageService.toWelcomePage.emit(true);
   }
   toShoppingListPage(){
-    this.appService.toShoppingListPage.emit(true);
+    this.mainPageService.toShoppingListPage.emit(true);
   }
   
 
