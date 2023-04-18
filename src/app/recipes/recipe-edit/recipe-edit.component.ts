@@ -63,20 +63,14 @@ export class RecipeEditComponent implements OnInit {
   onSubmit(){
     if(this.editMode){
       this.recipeService.updateRecipe(this.id, this.recipeForm.value);
-      this.dataStorageService.addNewRecipe(this.recipeForm.value).subscribe((response)=>{
-
-      })
     }
     else{
       this.recipeService.addRecipe(this.recipeForm.value);
-      this.dataStorageService.addNewRecipe(this.recipeForm.value).subscribe((response)=>{
-
-      })
     }
-
-  
-    this.onCancel();
+    this.dataStorageService.storeRecipes(this.recipeService.getRecipes());
   }
+
+
   get controls() { 
     return (<FormArray>this.recipeForm.get('ingredients')).controls;
   }
@@ -97,7 +91,7 @@ export class RecipeEditComponent implements OnInit {
 
   onDeleteIngredient(index: number){
     (<FormArray>this.recipeForm.get('ingredients')).removeAt(index);
-    
+ 
   }
 
 }
