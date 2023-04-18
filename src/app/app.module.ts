@@ -22,9 +22,10 @@ import { ShoppingListIntroComponent } from './shopping-list-intro/shopping-list-
 import { DataStorageService } from './shared/data-storage.service';
 import { RecipeService } from './recipes/recipe.service';
 import { AuthComponent } from './auth/auth.component';
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
-import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+
 
 @NgModule({
   declarations: [
@@ -51,8 +52,11 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
        ScrollingModule,
         HttpClientModule,
         provideFirebaseApp(() => initializeApp(environment.firebase)),
-        provideFirestore(() => getFirestore())],
+    
+      ],
   providers: [ShoppingListService, AppService, DataStorageService, RecipeService],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule {
+
+}

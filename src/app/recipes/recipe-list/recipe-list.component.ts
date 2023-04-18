@@ -13,7 +13,7 @@ import { DataStorageService } from 'src/app/shared/data-storage.service';
 })
 export class RecipeListComponent implements OnInit, OnDestroy {
   recipes: Recipe[];
-  subsciption: Subscription
+  subscription: Subscription
 
   constructor(private recipeService: RecipeService,
               private router: Router,
@@ -23,18 +23,20 @@ export class RecipeListComponent implements OnInit, OnDestroy {
               ) {
   }
   ngOnDestroy() {
-    this.subsciption.unsubscribe();
+    this.subscription.unsubscribe();
   }
 
   ngOnInit() {
-    this.recipes = this.recipeService.getRecipes();
-    this.subsciption = this.recipeService.recipesChanged.subscribe((recipes: Recipe[])=>{
+    console.log("list started");
+    this.subscription = this.recipeService.recipesChanged.subscribe((recipes: Recipe[])=>{
+      console.log("Subsbscribe Worked!! "+recipes);
       this.recipes = recipes
     })
+    this.dataStorageService.fetchRecipes().subscribe( recipes =>{
+      console.log("fetched")
+      this.recipeService.setRecipes(recipes);            
+  })
 
-    this.dataStorageService.fetchRecipes().subscribe(recipes =>{
-      this.recipeService.setRecipes(recipes);
-    })
   }
 
 }

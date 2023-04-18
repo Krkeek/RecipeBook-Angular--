@@ -1,27 +1,20 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 
 import { Recipe } from './recipe.model';
 import { Ingredient } from '../shared/ingredient.model';
 import { ShoppingListService } from '../shopping-list/shopping-list.service';
 import { Subject } from 'rxjs';
-import { DataStorageService } from '../shared/data-storage.service';
 
 @Injectable()
 export class RecipeService {
 
   recipesChanged = new Subject<Recipe[]>();
 
-  private recipes: Recipe[] = [
-        new Recipe('Test',
-        'Test',
-        'https://previews.123rf.com/images/boarding1now/boarding1now1212/boarding1now121200021/16690745-frische-salami-pizza-isoliert-auf-wei%C3%9Fem-hintergrund.jpg',
-        [
-          new Ingredient('Salami', 2),
-          new Ingredient('Tomato Sauce', 1)
-        ])
-  ];
+  private recipes: Recipe[] = [];
 
-  constructor(private slService: ShoppingListService, private dataStorageService: DataStorageService) {}
+  constructor(
+    private slService: ShoppingListService,
+    ) {}
 
   getRecipes() {
     return this.recipes.slice();
@@ -54,20 +47,14 @@ export class RecipeService {
         this.recipes.splice(index,1); 
         this.recipesChanged.next(this.recipes.slice());
 
-        const recipeToDelete = this.getRecipe(index);
-        this.dataStorageService.deleteRecipe(recipeToDelete.name, recipeToDelete.description);
-
   }
 
-    
-
+  x = new EventEmitter <Recipe[]>();
 
   setRecipes(recipes: Recipe[]){
-    const recipesToArray = Object.values(recipes);
-    this.recipes = recipesToArray;
+    this.recipes = recipes;
+    console.log('setting recipe...');
     this.recipesChanged.next(this.recipes.slice());
-    console.log(this.recipes);
-
   }
 
 }
