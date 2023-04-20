@@ -1,15 +1,12 @@
-import { HttpClient, HttpParams } from "@angular/common/http";
+import { HttpClient } from "@angular/common/http";
 import { Injectable, inject } from "@angular/core";
 import { Recipe } from "../recipes/recipe.model";
-import { AuthService } from "../auth/auth.service";
-import { exhaustMap, take } from "rxjs";
 
 @Injectable()
 
 export class DataStorageService {
     constructor(
         private http: HttpClient,
-        private authService: AuthService
         ) {}
      
    

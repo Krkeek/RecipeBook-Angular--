@@ -18,14 +18,11 @@ export class AuthInterceptorService implements HttpInterceptor {
       take(1),
       exhaustMap(user => {
         if (!user) {
-            console.log("User Not logged in!")
           return next.handle(req);
         }
         const modifiedReq = req.clone({
           params: new HttpParams().set('auth', user.token)
         });
-        console.log("modified");
-        console.log(modifiedReq);
         return next.handle(modifiedReq);
       })
     );
