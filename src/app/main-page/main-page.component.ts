@@ -1,5 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { MainPageService } from './main-page.service';
+import { AuthService } from '../auth/auth.service';
 
 @Component({
   selector: 'app-main-page',

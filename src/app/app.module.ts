@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {ScrollingModule} from '@angular/cdk/scrolling'
-import { HttpClientModule } from "@angular/common/http"
+import { HTTP_INTERCEPTORS, HttpClientModule } from "@angular/common/http"
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { RecipesComponent } from './recipes/recipes.component';
@@ -25,6 +25,8 @@ import { environment } from '../environments/environment';
 import { MainPageService } from './main-page/main-page.service';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { MainPageComponent } from './main-page/main-page.component';
+import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinner.component';
+import { AuthInterceptorService } from './auth/auth-interceptor.service';
 
 
 @NgModule({
@@ -43,7 +45,8 @@ import { MainPageComponent } from './main-page/main-page.component';
     WelcomePageComponent,
     ShoppingListIntroComponent,
     AuthComponent,
-    MainPageComponent
+    MainPageComponent,
+    LoadingSpinnerComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +58,8 @@ import { MainPageComponent } from './main-page/main-page.component';
         provideFirebaseApp(() => initializeApp(environment.firebase)),
     
       ],
-  providers: [ShoppingListService, MainPageService, DataStorageService, RecipeService],
+  providers: [ShoppingListService, MainPageService, DataStorageService, RecipeService,
+     {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi: true}],
   bootstrap: [AppComponent]
 })
 export class AppModule {

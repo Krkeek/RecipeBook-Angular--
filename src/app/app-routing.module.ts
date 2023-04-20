@@ -13,8 +13,9 @@ import { MainPageComponent } from './main-page/main-page.component';
 
 
  const appRoutes: Routes = [
-  { path: 'shopping-list', component: ShoppingListComponent },
+  { path: '', redirectTo: '/auth', pathMatch: 'full' },
   { path: 'auth', component: AuthComponent},
+  { path: 'shopping-list', component: ShoppingListComponent },
   { path: 'main-page', component: MainPageComponent, children:[
     { path: '', component: RecipeStartComponent,outlet: 'recipeRoutes' },
     { path: 'new', component: RecipeEditComponent,outlet: 'recipeRoutes' },
@@ -22,7 +23,6 @@ import { MainPageComponent } from './main-page/main-page.component';
     { path: ':id/edit', component: RecipeEditComponent,outlet: 'recipeRoutes',resolve:[RecipesResolverService] },
   ] },
  
-  { path: '', redirectTo: '/main-page', pathMatch: 'full' },
 
 ];
 
