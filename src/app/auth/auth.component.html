@@ -1,53 +1,53 @@
 <div class="row">
     <div id="sideBackground" class="col-7 d-none d-md-block">
     </div>
-    <div class="col-10 mx-auto col-md-5">
-        <div class="row m-12">
-            <div class="col-md-8 col-12 centered">
-                <!-- <div *ngIf="error" class="alert alert-danger">
-                    <p>{{error}}</p>
-                </div> -->
-                <div style="text-align: center;" *ngIf="isLoading"><app-loading-spinner></app-loading-spinner></div>
-                <form id="formDesign" #authForm="ngForm" (ngSubmit)="onSubmit(authForm)" *ngIf="!isLoading">
-                    <div class="form-group flexCon">
-                        <img style="margin: 0 auto; margin-bottom: 15px;" id="chef" src="../../assets/images/chef.png" alt="chef" width="80px">
-                    </div>
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col flexCon">
-                                <h4 class="centered">Recipe Book</h4>
+    <div id="sideLogin" class="col-10 mx-auto col-md-5">
+            <div class="row m-12">
+                    <div class="col-md-8 col-12 centered">
+                        <!-- <div *ngIf="error" class="alert alert-danger">
+                            <p>{{error}}</p>
+                        </div> -->
+                        <div style="text-align: center;" *ngIf="isLoading"><app-loading-spinner></app-loading-spinner></div>
+                        <form id="formDesign" #authForm="ngForm" (ngSubmit)="onSubmit(authForm)" *ngIf="!isLoading">
+                            <div class="form-group flexCon">
+                                <img style="margin: 0 auto; margin-bottom: 15px;" id="chef" src="../../assets/images/chef.png" alt="chef" width="80px">
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col flexCon">
-                                <p class="centered">Cook, Share, Enjoy: A Recipe Book for Everyone</p>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col flexCon">
+                                        <h4 class="centered">Recipe Book</h4>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col flexCon">
+                                        <p class="centered">Cook, Share, Enjoy: A Recipe Book for Everyone</p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                            
+                            <div class="form-group">
+                                    <div class="input-group">
+                                        <input placeholder="Email" type="email" class="form-control" name="email" ngModel required email>
+                                        <span style="font-family: sans-serif;" class="input-group-text basic-addon">@</span>
+                                      </div>
+                            </div>
+                            <div class="form-group mt-3">
+                                <div class="input-group">
+                                    <input placeholder="Password" type="password" class="form-control" name="password" ngModel required minlength="6">
+                                    <span style="font-family: sans-serif;" class="input-group-text basic-addon"><img width="16px" src="../../assets/images/lock.gif" alt=""></span>
+                                  </div>
+                            </div>
+                            <div class="flexCon">
+                                <div style="width: 100%;" class="mt-3 centered">
+                                    <button type="submit" class="btnType-A" [disabled]="!authForm.valid">{{isLoginMode? 'Login':'Register'}}</button> 
+                                    <button type="button" (click)="signInWithGoogle()" class="btnType-B"><img width="30px" src="../../assets/images/google.png" alt="googleIcon" class="btnIcon">{{isLoginMode? 'Continue with Google':'Continue with Google'}}</button> 
+                                    <button type="button" class="btnType-B"><img width="30px" src="../../assets/images/apple.png" alt="googleIcon" class="btnIcon">{{isLoginMode? 'Continue with Apple':'Continue  with Apple'}}</button> 
+                                    <p>{{isLoginMode? 'Create new account?' : 'Already have an account?'}}<a style="cursor: pointer;" (click)="onSwitchMode()">{{isLoginMode? ' Register': ' Login'}}</a></p>
+                                </div>
+                            </div>
+                        
+                        </form>
                     </div>
-                    
-                    <div class="form-group">
-                            <div class="input-group">
-                                <input placeholder="Email" type="email" class="form-control" name="email" ngModel required email>
-                                <span style="font-family: sans-serif;" class="input-group-text basic-addon">@</span>
-                              </div>
-                    </div>
-                    <div class="form-group mt-3">
-                        <div class="input-group">
-                            <input placeholder="Password" type="password" class="form-control" name="password" ngModel required minlength="6">
-                            <span style="font-family: sans-serif;" class="input-group-text basic-addon"><img width="16px" src="../../assets/images/lock.gif" alt=""></span>
-                          </div>
-                    </div>
-                    <div class="flexCon">
-                        <div style="width: 100%;" class="mt-3 centered">
-                            <button type="submit" class="btnType-A" [disabled]="!authForm.valid">{{isLoginMode? 'Login':'Register'}}</button> 
-                            <button type="button" (click)="signInWithGoogle()" class="btnType-B"><img width="30px" src="../../assets/images/google.png" alt="googleIcon" class="btnIcon">{{isLoginMode? 'Continue with Google':'Continue with Google'}}</button> 
-                            <button type="button" class="btnType-B"><img width="30px" src="../../assets/images/apple.png" alt="googleIcon" class="btnIcon">{{isLoginMode? 'Continue with Apple':'Continue  with Apple'}}</button> 
-                            <p>{{isLoginMode? 'Create new account?' : 'Already have an account?'}}<a style="cursor: pointer;" (click)="onSwitchMode()">{{isLoginMode? ' Register': ' Login'}}</a></p>
-                        </div>
-                    </div>
-                
-                </form>
             </div>
         </div>
     </div>
-</div>
