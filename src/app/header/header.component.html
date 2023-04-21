@@ -1,35 +1,10 @@
   <nav class="navbar navbar-expand-md">
-    <div id="f"  class="container-fluid">
-      <a id="brand" class="navbar-brand">Recipe Book</a>
-       <button 
-       class="navbar-toggler" 
-       type="button" 
-       data-bs-toggle="collapse" 
-       data-bs-target="#navbarSupportedContent" 
-       aria-controls="navbarSupportedContent" 
-       aria-expanded="false" 
-       aria-label="Toggle navigation"
-       >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto">
-          <li routerLinkActive="active"><a  class="nav-link" routerLink="/recipes">Recipes</a></li>
-          <li routerLinkActive="active"><a  class="nav-link"  routerLink="/shopping-list">Shopping List</a></li>
-        </ul>
-        <ul class="nav">
-          <li class="nav-item dropdown me-2">
-            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Manage
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item">Save Data</a></li>
-              <li><a class="dropdown-item">Fetch Data</a></li>
-            </ul>
-          </li>
-        </ul>
-      
-      </div>
+    <div class="container-fluid">
+      <ul class="navbar-nav ms-auto order-0 ">
+        <li class="nav-item">
+          <a routerLink="/auth"  class="nav-link" (click)="logout()" ><img width="30px" src="../../assets/images/logout.png" alt="logout"></a>
+        </li>
+      </ul>
     </div>
   </nav>
 

@@ -1,29 +1,8 @@
 nav{
-    background-color: #1b2625;
-    border-bottom: 1px solid #1b2625;    
+    background-color: transparent;
     padding: 0 !important;
 }
 
-nav a{
-    font-family: 'mainFont' !important;
-        font-weight: 700;
-    font-size: 18px;
-    color: #dad0ce;
-}
 
-#brand{
-    font-size: 25px;
-}
 
-.active{
-    background-color: #843619;
-    transition: background-color 0.6s ease;}
-
-.active:hover{
-    background-color: #b87730;
-}
-
-.dropdown-item{
-    color: #1b2625 !important;
-}
 
