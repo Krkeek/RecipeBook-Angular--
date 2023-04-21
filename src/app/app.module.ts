@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
-import { DropdownDirective } from './shared/dropdown.directive';
 import { ShoppingListService } from './shopping-list/shopping-list.service';
 import { AppRoutingModule } from './app-routing.module';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
@@ -19,11 +18,10 @@ import { environment } from '../environments/environment';
 import { MainPageService } from './main-page/main-page.service';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { MainPageComponent } from './main-page/main-page.component';
-import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinner.component';
 import { AuthInterceptorService } from './auth/auth-interceptor.service';
-import { AlertComponent } from './shared/alert/alert.component';
-import { PlaceHolderDirective } from './shared/placeholder/placeholder.directive';
 import { RecipesModule } from './recipes/recipes.module';
+import { SharedModule } from './shared/shared.module';
+import { CoreModule } from './core.module';
 
 
 @NgModule({
@@ -32,27 +30,23 @@ import { RecipesModule } from './recipes/recipes.module';
     HeaderComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
-    DropdownDirective,
     WelcomePageComponent,
     ShoppingListIntroComponent,
     AuthComponent,
-    MainPageComponent,
-    LoadingSpinnerComponent,
-    AlertComponent,
-    PlaceHolderDirective
+    MainPageComponent,    
   ],
   imports: [
+    SharedModule,
     BrowserModule,
     FormsModule,
     AppRoutingModule,
     ReactiveFormsModule,
     ScrollingModule,
     HttpClientModule,
+    CoreModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     RecipesModule 
       ],
-  providers: [ShoppingListService, MainPageService, DataStorageService, RecipeService,
-     {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi: true}],
   bootstrap: [AppComponent]
 })
 export class AppModule {
