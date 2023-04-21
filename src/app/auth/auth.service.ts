@@ -4,6 +4,9 @@ import { catchError, tap } from 'rxjs/operators'
 import { BehaviorSubject, Subject, throwError} from 'rxjs';
 import { User } from "./user.model";
 import { Router } from "@angular/router";
+import {getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth"
+import { initializeApp } from "@angular/fire/app";
+import { environment } from "src/environments/environment";
 
 export interface AuthSignInData{
     idToken: string;
@@ -23,7 +26,8 @@ export interface AuthSignUpData{
 
 @Injectable({providedIn: 'root'})
 export class AuthService{
-
+    
+  
     user = new BehaviorSubject<User>(null)
     tokenExpirationTimer: any;
     
@@ -128,5 +132,35 @@ export class AuthService{
         }, expirationDuration)
 
     }
+   
+
+    signInWithGoogle(){
+        const fireConfig = environment.firebase;
+        const googleProvider = new GoogleAuthProvider();
+        const auth = getAuth();
+        signInWithPopup(auth,googleProvider).then((result)=>{
+             // This gives you a Google Access Token. You can use it to access the Google API.
+            const credential = GoogleAuthProvider.credentialFromResult(result);
+            const token = credential.accessToken;
+            // The signed-in user info.
+            const user = result.user;
+
+
+
+
+        }).catch((error) => {
+    // Handle Errors here.
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // The email of the user's account used.
+    const email = error.customData.email;
+    // The AuthCredential type that was used.
+    const credential = GoogleAuthProvider.credentialFromError(error);
+    // ...
+  });
+
+    }
+    
+
 
 }

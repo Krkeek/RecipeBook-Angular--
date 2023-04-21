@@ -69,5 +69,8 @@ export class AuthComponent {
     form.reset();
 
   }
+  signInWithGoogle(){
+    this.authService.signInWithGoogle();
+  }
 
 }
