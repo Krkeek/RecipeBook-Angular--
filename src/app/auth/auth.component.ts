@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./auth.component.css']
 })
 export class AuthComponent {
+  statement = "Create new account? ";
   isLoginMode = true;
   isLoading = false;
   error: string = null;
@@ -19,6 +20,7 @@ export class AuthComponent {
     ){}
   onSwitchMode(){
     this.isLoginMode = !this.isLoginMode;
+
   }
 
   onSubmit(form: NgForm){
@@ -34,6 +36,7 @@ export class AuthComponent {
 
 
     if(this.isLoginMode){
+    this.statement = "Create new account? ";
       authSignInObs = this.authService.signin(email,password);
       authSignInObs
       .subscribe(
@@ -46,6 +49,7 @@ export class AuthComponent {
       )
   
     }else{
+      this.statement = "Already have an account? ";
       authSignUpObs = this.authService.signup(email,password);
       authSignUpObs
       .subscribe(

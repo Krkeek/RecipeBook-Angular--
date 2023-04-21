@@ -1,24 +1,51 @@
 <div class="row">
-    <div id="x" class="col">
+    <div id="sideBackground" class="col d-none d-md-block">
     </div>
     <div class="col">
-        <div class="row m-5">
-            <div class="col-md-4 col-12">
-                <div *ngIf="error" class="alert alert-danger">
+        <div class="row m-12">
+            <div class="col-md-8 col-12 centered">
+                <!-- <div *ngIf="error" class="alert alert-danger">
                     <p>{{error}}</p>
-                </div>
+                </div> -->
                 <div style="text-align: center;" *ngIf="isLoading"><app-loading-spinner></app-loading-spinner></div>
-                <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)" *ngIf="!isLoading">
+                <form id="formDesign" #authForm="ngForm" (ngSubmit)="onSubmit(authForm)" *ngIf="!isLoading">
+                    <div class="form-group flexCon">
+                        <img style="margin: 0 auto; margin-bottom: 15px;" id="chef" src="../../assets/images/chef.png" alt="chef" width="80px">
+                    </div>
                     <div class="form-group">
-                        <input placeholder="Email" type="email" class="form-control" name="email" ngModel required email>
+                        <div class="row">
+                            <div class="col flexCon">
+                                <h4 class="centered">Recipe Book</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col flexCon">
+                                <p class="centered">Cook, Share, Enjoy: A Recipe Book for Everyone</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                            <div class="input-group">
+                                <input placeholder="Email" type="email" class="form-control" name="email" ngModel required email>
+                                <span style="font-family: sans-serif;" class="input-group-text basic-addon">@</span>
+                              </div>
                     </div>
                     <div class="form-group mt-3">
-                        <input placeholder="Password" type="password" class="form-control" name="password" ngModel required minlength="6">
+                        <div class="input-group">
+                            <input placeholder="Password" type="password" class="form-control" name="password" ngModel required minlength="6">
+                            <span style="font-family: sans-serif;" class="input-group-text basic-addon"><img width="16px" src="../../assets/images/lock.gif" alt=""></span>
+                          </div>
                     </div>
-                    <div class="mt-3">
-                        <button type="submit" class="btn btn-primary" [disabled]="!authForm.valid">{{isLoginMode? 'Login':'Sign up'}}</button> | 
-                        <button type="button" class="btn btn-primary" (click)="onSwitchMode()">Switch to {{isLoginMode?'Sign up':'Login'}}</button>
+                    <div class="flexCon">
+                        <div style="width: 100%;" class="mt-3 centered">
+                            <button type="submit" class="btnType-A" [disabled]="!authForm.valid">{{isLoginMode? 'Login':'Register'}}</button> 
+                            <button type="submit" class="btnType-B" [disabled]="!authForm.valid"><img width="30px" src="../../assets/images/google.png" alt="googleIcon" class="btnIcon">{{isLoginMode? 'Continue with Google':'Continue with Google'}}</button> 
+                            <button type="submit" class="btnType-B" [disabled]="!authForm.valid"><img width="30px" src="../../assets/images/apple.png" alt="googleIcon" class="btnIcon">{{isLoginMode? 'Continue with Apple':'Continue  with Apple'}}</button> 
+                            <p>{{isLoginMode? 'Create new account?' : 'Already have an account?'}}<a style="cursor: pointer;" (click)="onSwitchMode()">{{isLoginMode? ' Register': ' Login'}}</a></p>
+                        </div>
                     </div>
+                
                 </form>
             </div>
         </div>
