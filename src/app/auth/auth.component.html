@@ -1,3 +1,4 @@
+<ng-template appPlaceholder></ng-template>
 <div class="row">
     <div id="sideBackground" class="col-7 d-none d-md-block">
     </div>
@@ -7,6 +8,7 @@
                         <!-- <div *ngIf="error" class="alert alert-danger">
                             <p>{{error}}</p>
                         </div> -->
+                        <!-- <app-alert [message]="error" *ngIf="error" (close)="onHandleError()"></app-alert> -->
                         <div style="text-align: center;" *ngIf="isLoading"><app-loading-spinner></app-loading-spinner></div>
                         <form id="formDesign" #authForm="ngForm" (ngSubmit)="onSubmit(authForm)" *ngIf="!isLoading">
                             <div class="form-group flexCon">
