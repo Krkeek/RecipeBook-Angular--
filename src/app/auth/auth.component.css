@@ -33,7 +33,7 @@ p{
 }
 
 button{
-    font-size: 20px;
+    font-size: calc(70% + 0.1vw + 0.1vw); ;
     padding: 10px;
     width:inherit;
     padding-left: 15px;
@@ -48,12 +48,4 @@ a{
 }
 .btnIcon{
     margin-right: 5px;
-}
-
-@media (max-width: 600px) {
-    #sideLogin{
-   
-    }
-
-    
 }

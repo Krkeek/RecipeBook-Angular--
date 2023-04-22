@@ -22,6 +22,7 @@ import { AuthInterceptorService } from './auth/auth-interceptor.service';
 import { RecipesModule } from './recipes/recipes.module';
 import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core.module';
+import { AuthModule } from './auth/auth.module';
 
 
 @NgModule({
@@ -32,18 +33,17 @@ import { CoreModule } from './core.module';
     ShoppingEditComponent,
     WelcomePageComponent,
     ShoppingListIntroComponent,
-    AuthComponent,
     MainPageComponent,    
   ],
   imports: [
+    FormsModule,
     SharedModule,
     BrowserModule,
-    FormsModule,
     AppRoutingModule,
-    ReactiveFormsModule,
     ScrollingModule,
     HttpClientModule,
     CoreModule,
+    AuthModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     RecipesModule 
       ],
